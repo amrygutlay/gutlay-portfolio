@@ -42,7 +42,10 @@
 }
 
 .photo { 
-  height: 40vmin;
+  height: 20vmin;
+  pointer-events: none;
+  border-radius: 50%;
+  border: 2px solid #333; 
   pointer-events: none;
 }
 
