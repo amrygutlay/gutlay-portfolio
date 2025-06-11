@@ -1,15 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import Homepage from './Homepage';
-import Portfolio from './Amry-portfolio';
-import App from './App';
+import './style.css';
+import Tabs from './Tabs';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Portfolio />
+    <Tabs />
   </React.StrictMode>
 );
 
