@@ -20,49 +20,47 @@ function Tabs() {
           zIndex: 1000,
         }}
       >
-       <nav style={{ 
-  display: 'flex', 
-  justifyContent: 'space-between',  
-  alignItems: 'center',             
-  cursor: 'pointer' 
-}}>
-  {/* Left side: Your name */}
-  <div style={{ fontWeight: 'bold', fontSize: '1.2rem', marginLeft: '40px' }}>
-    Amry Judith Gutlay
-  </div>
+        <nav style={{ 
+          display: 'flex', 
+          justifyContent: 'space-between',  
+          alignItems: 'center',             
+          cursor: 'pointer' 
+        }}>
+          {/* Left side: Your name */}
+          <div style={{ fontWeight: 'bold', fontSize: '1.2rem', marginLeft: '40px' }}>
+            Amry Judith Gutlay
+          </div>
 
-
-  {/* Right side: Tabs */}
-  <div style={{ display: 'flex', marginRight: '40px' }}>
-    {['home', 'about', 'portfolio', 'contact'].map((tab) => {
-      const labelMap = {
-        home: 'Home',
-        about: 'About Me',
-        portfolio: 'Portfolio',
-        contact: 'Contact',
-      };
-      return (
-        <div
-          key={tab}
-          onClick={() => setActiveTab(tab)}
-          style={{
-            padding: '10px 20px',
-            borderBottom: activeTab === tab ? '3px solid #007bff' : '3px solid transparent',
-            fontWeight: activeTab === tab ? 'bold' : 'normal',
-            color: 'white',
-          }}
-        >
-          {labelMap[tab]}
-        </div>
-      );
-    })}
-  </div>
-</nav>
-
+          {/* Right side: Tabs */}
+          <div style={{ display: 'flex', marginRight: '40px' }}>
+            {['home', 'about', 'portfolio', 'contact'].map((tab) => {
+              const labelMap = {
+                home: 'Home',
+                about: 'About Me',
+                portfolio: 'Portfolio',
+                contact: 'Contact',
+              };
+              return (
+                <div
+                  key={tab}
+                  onClick={() => setActiveTab(tab)}
+                  style={{
+                    padding: '10px 20px',
+                    borderBottom: activeTab === tab ? '3px solid #007bff' : '3px solid transparent',
+                    fontWeight: activeTab === tab ? 'bold' : 'normal',
+                    color: 'white',
+                  }}
+                >
+                  {labelMap[tab]}
+                </div>
+              );
+            })}
+          </div>
+        </nav>
       </header>
 
       <main style={{ padding: '20px' }}>
-        {activeTab === 'home' && <Homepage />}
+        {activeTab === 'home' && <Homepage setActiveTab={setActiveTab} />}
         {activeTab === 'about' && <AboutMe />}
         {activeTab === 'portfolio' && <Portfolio />}
         {activeTab === 'contact' && <ContactInformation />}
