@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/gutlay-portfolio/static/css/main.f20eb811.css",
+    "main.js": "/gutlay-portfolio/static/js/main.2e90fcb4.js",
+    "static/js/453.12ff31ff.chunk.js": "/gutlay-portfolio/static/js/453.12ff31ff.chunk.js",
+    "static/media/8bitram.JPG": "/gutlay-portfolio/static/media/8bitram.5f7a95636b00e0af7c74.JPG",
+    "static/media/J&MBakedGoodies.png": "/gutlay-portfolio/static/media/J&MBakedGoodies.64cee71622375b4c1f5d.png",
+    "static/media/PnoyDishcovery.png": "/gutlay-portfolio/static/media/PnoyDishcovery.df55c8b1f924227c7297.png",
+    "static/media/MazeSolvingRobot.png": "/gutlay-portfolio/static/media/MazeSolvingRobot.ee527968904fff52abe9.png",
+    "static/media/ECOBin.png": "/gutlay-portfolio/static/media/ECOBin.0c63a29d4ceb1d96d13a.png",
+    "static/media/ID_Gutlay.jpeg": "/gutlay-portfolio/static/media/ID_Gutlay.72c33374c5390c66130a.jpeg",
+    "static/media/3bitUpDownCounter.png": "/gutlay-portfolio/static/media/3bitUpDownCounter.07d3eb01984901267318.png",
+    "static/media/DCFanVRPS.jpg": "/gutlay-portfolio/static/media/DCFanVRPS.3395ea0a2b7427056597.jpg",
+    "static/media/CommUnity.png": "/gutlay-portfolio/static/media/CommUnity.384b2f492a403961c88b.png",
+    "static/media/ClapSwitch.jpg": "/gutlay-portfolio/static/media/ClapSwitch.aedbbef10109cfa4fb23.jpg",
+    "index.html": "/gutlay-portfolio/index.html",
+    "main.f20eb811.css.map": "/gutlay-portfolio/static/css/main.f20eb811.css.map",
+    "main.2e90fcb4.js.map": "/gutlay-portfolio/static/js/main.2e90fcb4.js.map",
+    "453.12ff31ff.chunk.js.map": "/gutlay-portfolio/static/js/453.12ff31ff.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f20eb811.css",
+    "static/js/main.2e90fcb4.js"
+  ]
+}
