@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
-import Homepage from './Homepage';
-import ContactInformation from './ContactInformation';
-import Portfolio from './Portfolio';
-import AboutMe from './Aboutme';
+import React from 'react';
+import Homepage from './components/Homepage';
+import ContactInformation from './components/ContactInformation';
+import Portfolio from './components/Portfolio';
+import AboutMe from './components/Aboutme';
 
 function Tabs() {
-  const [activeTab, setActiveTab] = useState('home');
-
   return (
     <>
       <header
@@ -20,12 +18,14 @@ function Tabs() {
           zIndex: 1000,
         }}
       >
-        <nav style={{ 
-          display: 'flex', 
-          justifyContent: 'space-between',  
-          alignItems: 'center',             
-          cursor: 'pointer' 
-        }}>
+        <nav
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            cursor: 'pointer',
+          }}
+        >
           {/* Left side: Your name */}
           <div style={{ fontWeight: 'bold', fontSize: '1.2rem', marginLeft: '40px' }}>
             Amry Judith Gutlay
@@ -43,11 +43,14 @@ function Tabs() {
               return (
                 <div
                   key={tab}
-                  onClick={() => setActiveTab(tab)}
+                  onClick={() => {
+                    const section = document.getElementById(tab);
+                    section?.scrollIntoView({ behavior: 'smooth' });
+                  }}
                   style={{
                     padding: '10px 20px',
-                    borderBottom: activeTab === tab ? '3px solid #007bff' : '3px solid transparent',
-                    fontWeight: activeTab === tab ? 'bold' : 'normal',
+                    borderBottom: '3px solid transparent',
+                    fontWeight: 'normal',
                     color: 'white',
                   }}
                 >
@@ -59,11 +62,20 @@ function Tabs() {
         </nav>
       </header>
 
-      <main style={{ padding: '20px' }}>
-        {activeTab === 'home' && <Homepage setActiveTab={setActiveTab} />}
-        {activeTab === 'about' && <AboutMe />}
-        {activeTab === 'portfolio' && <Portfolio />}
-        {activeTab === 'contact' && <ContactInformation />}
+      {/* All Sections with alternating background color classes */}
+      <main style={{ padding: '0' }}>
+        <section id="home" className="section-dark">
+          <Homepage />
+        </section>
+        <section id="about" className="section-light">
+          <AboutMe />
+        </section>
+        <section id="portfolio" className="section-dark">
+          <Portfolio />
+        </section>
+        <section id="contact" className="section-light">
+          <ContactInformation />
+        </section>
       </main>
     </>
   );

@@ -1,10 +1,17 @@
 import React from 'react';
-import photo from './img/ID_Gutlay.jpeg';
-import './style.css';
+import photo from '../img/ID_Gutlay.jpeg';
+import '../style.css';
 
-function Homepage({ setActiveTab }) {
+function Homepage() {
+  const handleViewWork = () => {
+    const portfolioSection = document.getElementById('portfolio');
+    if (portfolioSection) {
+      portfolioSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <div className="home-container">
+    <div className="home-container" id="home">
       <div className="home-left">
         <img src={photo} className="profile-photo" alt="Amry Judith T. Gutlay" />
       </div>
@@ -12,13 +19,13 @@ function Homepage({ setActiveTab }) {
       <div className="home-right">
         <h1 className="intro-heading">Hi, I'm Amry!</h1>
         <p className="intro-sub">
-          <b><i>Bachelor of Science in Computer Engineering<br />Major in Cybersecurity</i></b>
+          <b><i>Cybersecurity Specialist</i></b>
         </p>
         <p className="intro-tagline">
           Passionate about innovation, security, and building solutions that matter.
         </p>
 
-        <button className="cta-button" onClick={() => setActiveTab('portfolio')}>
+        <button className="cta-button" onClick={handleViewWork}>
           View My Work
         </button>
       </div>
