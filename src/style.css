@@ -142,31 +142,28 @@ section {
 }
 
 .intro-tagline {
-  font-size: 1.2rem;  /* 19.2px */
+  font-size: 1.2rem;
   color: white;
   margin-top: 10px;
   font-style: italic;
   font-weight: 300;
   font-family: 'Poppins', sans-serif;
   letter-spacing: 0.04em;
-  border-right: 5px solid;
-  width: 100%;
+  border-right: 5px solid white;
   white-space: nowrap;
   overflow: hidden;
+  width: 0;
   animation: 
-    typing 2s steps(50),
-    cursor .2s step-end infinite alternate;
-}
-
-@keyframes cursor {
-  50% {
-    border-color: transparent;
-  } 
+    typing 2s steps(1000, end) forwards,  /* Adjust steps to length of sentence */
+    cursor 0.9s step-end infinite;
 }
 
 @keyframes typing {
-  from { width: 0 };
+  from { width: 0 }
+  to { width: 65ch }  /* Approximate character length of the sentence */
 }
+
+
 
 /* Button */
 .cta-button {
